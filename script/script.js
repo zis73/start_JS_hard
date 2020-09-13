@@ -1,11 +1,35 @@
-let num = 266219,
-res=1;
+//Задача №1
+let lang = prompt('Введите название языка (ru/eng)');
 
-while(num != 0){
-  res *= num % 10;
-  num = Math.floor(num / 10);
+const arrLang = [];
+arrLang['ru'] = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+arrLang['en'] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+if(lang === 'ru') {
+  alert('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье');
+}else if (lang === 'en') {
+  alert('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+}else {
+  alert('что-то ввел не то');
 }
 
-console.log("Multiplication result: " + res);
-res **= 3;
-console.log("Power product and output of two numbers: " + String(res).slice(0,2));
+switch(lang) {
+  case 'ru':
+    alert('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье');
+    break;
+  case 'en':
+    alert('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+    break;
+  default:
+    alert('Что-то не то ввел');
+}
+
+console.log(arrLang[lang]);
+
+Заданик №2
+
+let namePerson = prompt('Введите имя')
+
+let result = namePerson === 'Артем' ? 'директор' : namePerson === 'Максим' ? 'преподаватель' : 'student';
+
+alert(result);
